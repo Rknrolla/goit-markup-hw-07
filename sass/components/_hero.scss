@@ -1,0 +1,42 @@
+/*main img*/
+.main-section {
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url("../images/main_img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 600px;
+  background-position: top center;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  @include centerFlex;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  gap: var(--gap-primary);
+  /*margin: 200px 452px 200px 452px;*/
+  &__title {
+    @include main_text;
+    text-transform: var(--text-transformUpper);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
+  &__button {
+    @include main_text;
+    @include blue_button;
+    padding: 10px 20px;
+    box-shadow: var(--box-shadow);
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+      transform: scale(1.03);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+/*CUSTOMER*/
+
+.customer {
+  @extend %bgGray;
+  &__title {
+    padding-top: var(--padding-general);
+  }
+  &__list {
+    @include flex_rule;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    flex-shrink: 1;
+    gap: var(--gap-primary);
+    justify-content: space-between;
+
+    padding-bottom: var(--padding-general);
+    padding-top: 50px;
+    &__item__img {
+      width: 170px;
+      height: 92px;
+      border: 1px solid var(--lightgray-color);
+      border-radius: var(--border-radius4);
+      fill: var(--lightgray-color);
+      padding: 20px;
+      &:hover,
+      &:focus {
+        border: 1px solid var(--blue-color);
+        border-radius: 12px;
+        fill: var(--blue-color);
+        @include transition(border-radius, background-color, fill);
+      }
+    }
+  }
+}
